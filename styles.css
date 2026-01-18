@@ -1,0 +1,293 @@
+/* ЭЛЕМЕНТНЫЕ СЕЛЕКТОРЫ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+header, nav, main, footer {
+    padding: 10px 20px;
+}
+
+header {
+    background-color: #102D69;
+    color: white;
+}
+
+/* СЕЛЕКТОР ТЕГА + ПСЕВДО-ЭЛЕМЕНТ */
+h1::first-letter {
+    font-size: 150%;
+    color: #244A9A;
+}
+.brother{
+    color: #D0D0D0;
+}
+
+/* СЕЛЕКТОР КЛАССА */
+.nav-link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* ПСЕВДО-КЛАСС */
+.nav-link:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* СЕЛЕКТОР ИДЕНТИФИКАТОРА */
+#main-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* КОМБИНИРОВАННЫЙ СЕЛЕКТОР: article внутри main */
+main article {
+    flex: 2;
+}
+
+/* КОМБИНИРОВАННЫЙ СЕЛЕКТОР: aside внутри main */
+main aside {
+    flex: 1;
+    background-color: #fafafa;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+}
+
+/* СТИЛИ ТЕКСТА */
+p {
+    line-height: 1.5;
+}
+
+/* СЕЛЕКТОР КЛАССА ДЛЯ ВАЖНОГО ТЕКСТА */
+.highlight {
+    color: #003366;
+    font-weight: bold;
+    background-color: #e0ecff;
+}
+
+/* ВИЗУАЛИЗАЦИЯ СПИСКОВ */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+/* СЕЛЕКТОР АТРИБУТА: все input[type="text"] */
+input[type="text"] {
+    border: 1px solid #003366;
+    padding: 5px;
+}
+
+/* СЕЛЕКТОР АТРИБУТА: все input[type="email"] */
+input[type="email"] {
+    border: 1px solid #ff6600;
+    padding: 5px;
+}
+
+/* СЕЛЕКТОР АТРИБУТА: все input[type="submit"], button[type="submit"] */
+button[type="submit"] {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* ПСЕВДО-КЛАСС ДЛЯ КНОПКИ */
+button[type="submit"]:hover {
+    background-color: #0055aa;
+}
+
+/* ПСЕВДО-КЛАСС :focus ДЛЯ ПОЛЕЙ ФОРМЫ */
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid #ff6600;
+}
+
+/* ПСЕВДО-ЭЛЕМЕНТ ::placeholder */
+input::placeholder {
+    color: #999;
+}
+
+/* FOOTER */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* FLEXBOX ДЛЯ НАВИГАЦИИ */
+nav {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+/* POSITION: пример фиксированной кнопки "наверх" */
+#to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #003366;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* МЕДИА-ЗАПРОС @media: адаптивная верстка */
+@media (max-width: 700px) {
+    #main-content {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin-bottom: 5px;
+    }
+}
+
+/* ПРИМЕР ИСПОЛЬЗОВАНИЯ !important */
+.important-text {
+    color: red !important;
+    font-weight: bold;
+}
+/* КАРТА */
+#map {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ЧАТ */
+#chat-section {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#chat-window {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+#chat-messages {
+    font-size: 14px;
+}
+
+.chat-message {
+    margin: 4px 0;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.chat-message.user {
+    background-color: #e0ecff;
+    text-align: right;
+}
+
+.chat-message.bot {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+#chat-controls {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #003366;
+    border-radius: 4px;
+}
+
+#chat-send,
+#chat-voice {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#chat-send {
+    background-color: #003366;
+    color: white;
+}
+
+#chat-send:hover {
+    background-color: #0055aa;
+}
+
+#chat-voice {
+    background-color: #003366;
+    color: white;
+}
+
+#chat-voice:hover {
+    background-color: #0055aa;
+}
+
+.chat-hint {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Адаптация под маленький экран — чат */
+@media (max-width: 700px) {
+    #chat-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #chat-send,
+    #chat-voice {
+        width: 100%;
+    }
+}
+/* ВИЗУАЛИЗАЦИЯ ГОЛОСА (как простые полоски) */
+#voice-visualizer {
+    display: none; /* показываем только во время записи */
+    margin-top: 5px;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.voice-bar {
+    width: 4px;
+    background-color: #ff6600;
+    height: 4px;
+    border-radius: 2px;
+    transition: height 0.1s linear;
+}
+
+/* Сообщение с голосом */
+.chat-message.voice {
+    font-style: italic;
+    cursor: pointer;
+}
